@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Disappearing Circles</title>
+
+    <style>
+
+        #container
+        {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #red
+        {
+            margin: 50px 0 50px 0;
+            background-color: red;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            
+        }
+
+        #yellow
+        {
+            margin: 50px 0 50px 0;
+            background-color: gold;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+
+        #green
+        {
+            margin: 50px 0 50px 0;
+            background-color: green;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        <div id="red"></div>
+        <div id="yellow"></div>
+        <div id="green"></div>
+    </div>
+
+    <script>
+
+        document.getElementById("red").onclick = function()
+        {
+            document.getElementById("yellow").style.display = "none";
+    
+        }
+
+        document.getElementById("green").onclick = function()
+        {
+            document.getElementById("red").style.display = "none";
+            document.getElementById("yellow").style.display = "block"
+    
+        }
+        document.getElementById("yellow").onclick = function()
+        {
+            document.getElementById("green").style.display = "none";
+            document.getElementById("red").style.display = "block"
+    
+        }
+        
+        
+
+    </script>
+
+</body>
+</html>
